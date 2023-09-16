@@ -61,7 +61,7 @@ streamlit.header("Snowflake connection and other activities started !!!!")
 
 # Add a text box to get fruit name from user
 streamlit.header("Query SF Table!")
-streamlit.header("The fruit load list contains:") 
+streamlit.header("View our Fruit List - Add your Favourites !!") 
 
 
 # Snowflake related functions
@@ -71,7 +71,7 @@ def get_fruit_load_list():
         return my_cur.fetchall()
 
 # Add a button to load the fruit
-if streamlit.button('Get Fruit Load List'):
+if streamlit.button('Get Fruit List'):
     my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     my_data_rows = get_fruit_load_list()
     my_cnx.close()
