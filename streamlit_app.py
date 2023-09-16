@@ -111,6 +111,9 @@ streamlit.dataframe(my_data_row)
 # Add a text box to get fruit name from user
 streamlit.header("Query SF Table!")
 
+# don't run anything past here while we troubleshoot 
+streamlit.stop ()
+
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
