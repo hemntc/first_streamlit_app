@@ -47,8 +47,8 @@ streamlit.header("Fruityvice Fruit Advice!")
 # New section to display new fruityvice api response
 streamlit.header("New Fruityvice Fruit Advice!")
 
-#import requests
-#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + 'kiwi')
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + 'kiwi')
 
 # take the json version of the response and normalise it
 #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
@@ -59,9 +59,9 @@ streamlit.header("New Fruityvice Fruit Advice!")
 # New section to display new fruityvice api response as per user entered fruit
 streamlit.header("User entered Fruityvice Fruit Advice!")
 
-fruit_choice = streamlit.text_input('What fruit would you like information about?', 'Kiwi')
+fruit_choice = streamlit.text_input('What fruit would you like information about?', 'kiwi')
 streamlit.write('The user entered fruit : ', fruit_choice)
 
 import requests
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + 'kiwi')
 
