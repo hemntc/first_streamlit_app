@@ -64,3 +64,5 @@ streamlit.write('The user entered fruit : ', fruit_choice)
 
 import requests
 fruityvice_response_new = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+
+
